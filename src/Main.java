@@ -2,7 +2,8 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+
+/**        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
        Employee emp1 = new Employee("Sandy","Karne","SE",15.00);
 
@@ -24,6 +25,10 @@ public class Main {
         System.out.println("Check emp2 objects hashcode: " + emp2.hashCode());
         System.out.println("Check emp3 objects hashcode: " + emp3.hashCode());
         System.out.println("Check emp1 objects hashcode: " + emp1.hashCode());
+ **/
+
+     Employee emp1 = new Employee();
+     emp1.inputEmployee();
 
 
     }
