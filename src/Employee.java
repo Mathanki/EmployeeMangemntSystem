@@ -90,6 +90,7 @@ public class  Employee {
         } else {
             System.out.println("Invalid employee type.");
         }
+        scanner.close();
     }
 
     private void getEmployeeData( Scanner scanner){
