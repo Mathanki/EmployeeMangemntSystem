@@ -4,7 +4,7 @@ public class CommEmp extends  Employee {
 
     private  int hoursWorked;
 
-    private final double COMMISSION_RATE = 0.01;
+    private static final double COMMISSION_RATE = 0.01;
 
     public CommEmp() {
     }
@@ -46,7 +46,7 @@ public class CommEmp extends  Employee {
         if(sales >= 1000) {
             System.out.println("Commission on Sales: $" + (sales * 0.1));
         } else{
-            System.out.println("Commission not getting for sales");
+            System.out.println("Commission not getting for sales when sales amount less than $ 1000");
         }
 
         System.out.println("Weekly Pay: $" + calculateSalary());
