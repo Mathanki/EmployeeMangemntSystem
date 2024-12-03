@@ -33,18 +33,23 @@ public class CommEmp extends  Employee {
 
     @Override
     public double calculateSalary() {
+        double commission = this.calculateCommision(this.sales);
+        return ( super.getPayRate() * this.hoursWorked ) + commission;
+    }
+
+    private double calculateCommision(double sales){
         double commission = 0;
         if(sales >= 1000){
-             commission = sales * COMMISSION_RATE;
+            commission = sales * COMMISSION_RATE;
         }
-        return ( super.getPayRate() * this.hoursWorked ) + commission;
+        return commission;
     }
 
     @Override
     public void display() {
         super.display();
         if(sales >= 1000) {
-            System.out.println("Commission on Sales: $" + (sales * 0.1));
+            System.out.println("Commission on Sales: $" + calculateCommision(this.sales));
         } else{
             System.out.println("Commission not getting for sales when sales amount less than $ 1000");
         }
