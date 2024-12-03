@@ -64,7 +64,7 @@ public class  Employee {
     public void inputEmployee() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter employee type (salaried/hourly): ");
+        System.out.println("Enter employee type (salaried/hourly/commEmp): ");
         String type = scanner.nextLine();
 
         if (type.equalsIgnoreCase("salaried")) {
@@ -87,6 +87,18 @@ public class  Employee {
             hourlyEmp.calculateSalary();
             System.out.println();
             hourlyEmp.display();
+        } else if (type.equalsIgnoreCase("commEmp")) {
+            getEmployeeData(scanner);
+            System.out.println("Enter sales amount:  ");
+            double sales = scanner.nextDouble();
+            System.out.println("Enter hourly rate:  ");
+            this.payRate = scanner.nextDouble();
+            System.out.println("Enter hours worked:  ");
+            int hoursWorked  = scanner.nextInt();
+            CommEmp commEmp = new CommEmp( this.firstName,   this.LastName, this.title, this.payRate,sales,hoursWorked);
+            commEmp.calculateSalary();
+            System.out.println();
+            commEmp.display();
         } else {
             System.out.println("Invalid employee type.");
         }
